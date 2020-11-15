@@ -1,0 +1,6 @@
+>>> \e[96m{\e[39m
+>>> \e[96m	"extends": "stylelint-config-standard"\e[39m
+>>> \e[96m}\e[39m
+{
+	"extends": "stylelint-config-standard"
+}
