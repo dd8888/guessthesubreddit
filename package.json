@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html -d build --public-url /guessthesubreddit/ && gh-pages -d build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist build .cache gh-pages-clean",
+    "dev": "nodemon src/js/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +21,11 @@
     "parcel": "^1.12.4",
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "node": "^15.2.0",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.6"
   }
 }
