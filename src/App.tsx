@@ -11,6 +11,8 @@ import withReactContent from 'sweetalert2-react-content'
 import {StyledChip} from './styledComponents/styledChip'
 import {StyledButton} from './styledComponents/styledButton'
 import {StyledCircularProgress} from './styledComponents/styledCircularProgress'
+import {Helmet} from "react-helmet"
+
 
 const MySwal = withReactContent(Swal)
 
@@ -111,6 +113,12 @@ function App() {
   }
   return (
     <div className="App">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Guess The Subreddit</title>
+        <link rel="canonical" href="http://guessthesubredd.it" />
+        <link id="favicon" rel="icon" type="image/x-icon" href="../src/images/favicon-96x96.png"  />
+      </Helmet>
      <header className="App-header">
       <StyledChip label={"Your score is: " + countCorrect}variant="outlined" color="primary" icon={<FavoriteBorder />} />
         <h2>guessthesubredd<span style={{color: "#F54503"}}>.it</span></h2>
