@@ -92,7 +92,8 @@ function App() {
       }).then(()=> {
         setCountCorrect(countCorrect + 1)
         setOptionsNames((empty: any) => [])
-        setNewQuestion(newQuestion + 1)
+        setNewPost(newPost + 1)
+
       })
     }else{
       MySwal.fire({
@@ -127,6 +128,8 @@ function App() {
         {postType !== undefined ? <img width="720" height="500"src={imageURL} alt="reddit"/> : ""}
         <p>
         <ArrowUpward style={{ color: "#F54503", fontSize: "20" }} /> {updoots} 
+        AA{postOnlyImages.length}
+
         </p>
         <Grid item xs={12}>
         <Grid container justify="center" spacing={4}>
