@@ -35,7 +35,6 @@ function App() {
   const [newPost, setNewPost] = useState(0)
   const [postOnlyImages, setPostOnlyImages] = useState<any>([])
   const [optionsNames, setOptionsNames] = useState<any>([])
-  const [newQuestion, setNewQuestion] = useState(0)
   const [countCorrect, setCountCorrect] = useState(0)
 
   useEffect(() => {
@@ -55,7 +54,7 @@ function App() {
       .then(function () {
         // always executed
       });
-  }, [newQuestion])
+  }, [])
 
   useEffect(() => {
     const randomNumber = getRandomNumber(postOnlyImages.length)
@@ -128,7 +127,6 @@ function App() {
         {postType !== undefined ? <img width="720" height="500"src={imageURL} alt="reddit"/> : ""}
         <p>
         <ArrowUpward style={{ color: "#F54503", fontSize: "20" }} /> {updoots} 
-        AA{postOnlyImages.length}
 
         </p>
         <Grid item xs={12}>
