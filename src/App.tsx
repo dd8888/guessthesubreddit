@@ -118,7 +118,6 @@ function App() {
         <div>
         {postType !== undefined ? <img width="720" height="500"src={imageURL} alt="reddit"/> : ""}
         <p>
-          {subredditName}
         <ArrowUpward style={{ color: "#F54503", fontSize: "20" }} /> {updoots} 
         </p>
         <Grid item xs={12}>
