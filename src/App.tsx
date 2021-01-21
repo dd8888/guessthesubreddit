@@ -46,13 +46,12 @@ function App() {
             setPostOnlyImages((postOnlyImages: any) => [...postOnlyImages, req.data])
           }
         })
-        setNewPost(newPost + 1)
       })
       .catch(function (error) {
         console.log(error);
       })
       .then(function () {
-        // always executed
+        setNewPost(newPost + 1)
       });
   }, [])
 
