@@ -123,13 +123,13 @@ function App() {
         <h2>guessthesubredd<span style={{color: "#F54503"}}>.it</span></h2>
         {optionsNames.length > 0 ?
         <div>
-        {postType !== undefined ? <img width="720" height="500"src={imageURL} alt="reddit"/> : ""}
+        {postType !== undefined ? <img className="postImage" src={imageURL} alt="reddit"/> : ""}
         <p>
         <ArrowUpward style={{ color: "#F54503", fontSize: "20" }} /> {updoots} 
 
         </p>
         <Grid item xs={12}>
-        <Grid container justify="center" spacing={4}>
+        <Grid container justify="center" spacing={1}>
           {[0, 1].map((value) => (
             <Grid key={value} item>
               <StyledButton className="OptionButton" variant="contained" onClick={() => { checkAnswer(optionsNames[value]) }}>
@@ -138,7 +138,7 @@ function App() {
             </Grid>
           ))}
         </Grid>
-        <Grid container justify="center" spacing={4}>
+        <Grid container justify="center" spacing={1}>
           {[2, 3].map((value) => (
             <Grid key={value} item>
               <StyledButton className="OptionButton" variant="contained" onClick={() => { checkAnswer(optionsNames[value]) }}>
