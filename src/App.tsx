@@ -14,7 +14,6 @@ import {StyledCircularProgress} from './styledComponents/styledCircularProgress'
 import {Helmet} from "react-helmet"
 import ReactGA from 'react-ga';
 ReactGA.initialize('G-LKT1T69MX9');
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 
 const MySwal = withReactContent(Swal)
@@ -40,6 +39,10 @@ function App() {
   const [optionsNames, setOptionsNames] = useState<any>([])
   const [countCorrect, setCountCorrect] = useState(0)
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  })
+  
   useEffect(() => {
     axios
       .get("https://www.reddit.com/r/popular/top.json?limit=500")
