@@ -12,6 +12,9 @@ import {StyledChip} from './styledComponents/styledChip'
 import {StyledButton} from './styledComponents/styledButton'
 import {StyledCircularProgress} from './styledComponents/styledCircularProgress'
 import {Helmet} from "react-helmet"
+import ReactGA from 'react-ga';
+ReactGA.initialize('G-LKT1T69MX9');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 
 const MySwal = withReactContent(Swal)
