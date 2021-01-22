@@ -12,8 +12,7 @@ import {StyledChip} from './styledComponents/styledChip'
 import {StyledButton} from './styledComponents/styledButton'
 import {StyledCircularProgress} from './styledComponents/styledCircularProgress'
 import {Helmet} from "react-helmet"
-import ReactGA from 'react-ga';
-ReactGA.initialize('G-LKT1T69MX9');
+import { useAnalytics } from './utils/googleAnalytics';
 
 
 const MySwal = withReactContent(Swal)
@@ -38,10 +37,7 @@ function App() {
   const [postOnlyImages, setPostOnlyImages] = useState<any>([])
   const [optionsNames, setOptionsNames] = useState<any>([])
   const [countCorrect, setCountCorrect] = useState(0)
-
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  })
+  useAnalytics(window.location.pathname + window.location.search);
   
   useEffect(() => {
     axios
