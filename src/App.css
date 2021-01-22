@@ -23,6 +23,18 @@
 .App-link {
   color: #61dafb;
 }
+.footer {
+  background-color: #f54503;
+  color: white;
+  line-height: 2;
+}
+.footer a {
+  color: white;
+}
+.footer span {
+  color: transparent;
+  text-shadow: 0 0 0 white;
+}
 
 @media only screen and (orientation: portrait) {
   .postImage {

@@ -115,6 +115,7 @@ function App() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Guess The Subreddit</title>
+        <meta name="description" content="Can you guess the subreddit?"/>
         <link rel="canonical" href="http://guessthesubredd.it" />
         <link id="favicon" rel="icon" type="image/x-icon" href="../src/images/favicon-96x96.png"  />
       </Helmet>
@@ -151,6 +152,9 @@ function App() {
           </div>
           : <div><p>Loading a new post...</p> <StyledCircularProgress /> </div>      }
       </header>
+      <div className="footer">
+        Created by <a href="https://daviddiazh.dev" rel="noreferrer" target="_blank">David Díaz</a>
+      </div>
     </div>
   );
 }
